@@ -32,9 +32,9 @@ class AnimalColor(models.Model):
 # animal
 
 class Animal(models.Model):
+    animal_name = models.CharField(max_length=255)
     animal_breed = models.ForeignKey(Breed, on_delete=models.DO_NOTHING)
     animal_color = models.ForeignKey(AnimalColor, on_delete=models.DO_NOTHING)
-    animal_name = models.CharField(max_length=255)
     animal_age = models.IntegerField()
 
     def __str__(self):

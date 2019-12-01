@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% if animal_list %}
+<ul>
+    {% for animal in animal_list %}
+    <li> <a href="/animal/{{ animal.id }}/">{{ animal.animal_name }} </a> </li>
+    {% endfor %}
+</ul>
+
+{% else %}
+
+<p>No animal are available.</p>
+
+{% endif %}
+
+</body>
+</html>
